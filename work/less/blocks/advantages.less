@@ -1,0 +1,87 @@
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+
+  list-style: none;
+}
+.advantages__item {
+  width: 280px;
+  margin: 0 auto;
+  &:first-child {
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: 0 27px;
+  }
+  &:nth-child(2) {
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 5px 20px;
+  }
+  &:last-child {
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: 0 25px;
+  }
+}
+.advantages__item-inner {
+  margin: 0;
+  padding-top: 35px;
+  padding-left: 50px;
+}
+.advantages__item-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (min-width: @tablet) {
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+  }
+  .advantages__item {
+    width: 33%;
+    margin: 0;
+    &:first-child {
+      order: 1;
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
+      background-position: center 60px;
+      background-size: 75px 72px;
+    }
+    &:nth-child(2) {
+      order: 3;
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center 58px;
+      background-size: 64px 75px;
+    }
+    &:last-child {
+      order: 2;
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
+      background-position: center 62px;
+      background-size: 77px 68px;
+    }
+  }
+  .advantages__item-inner {
+    width: 165px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 160px;
+
+    text-align: center;
+  }
+}
+@media (min-width:@desktop) {
+  .advantages__list {
+    padding-bottom: 85px;
+  }
+  .advantages__item-inner {
+    width: 290px;
+    
+  }
+}
