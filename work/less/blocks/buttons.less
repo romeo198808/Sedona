@@ -1,0 +1,50 @@
+.page-header__toggle {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  font-size: 0;
+
+  border: 0;
+  background-color: transparent;
+  &--close::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: @color1;
+    box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
+  }
+  &--open::after,
+  &--open::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 12px;
+
+    width: 28px;
+    height: 3px;
+
+    background-color: #ffffff;
+  }
+  &--open::after {
+    transform: rotate(45deg);
+  }
+  &--open::before {
+    transform: rotate(-45deg);
+  }
+}
+@media (min-width: @tablet) {
+  .page-header__toggle {
+    display: none;
+  }
+}

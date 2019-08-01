@@ -10,19 +10,32 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo"><img src="" alt="Логотип"></a>
-      <button type="button" class="page-header__toggle"><span>Открыть меню</span></button>
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list nav__list--close nav__list--nojs">
           <li class="nav__item"><a class="nav__link">Главная</a></li>
           <li class="nav__item"><a href="photo.html" class="nav__link">Фото и видео</a></li>
           <li class="nav__item"><a href="form.html" class="nav__link">Форма отзыва</a></li>
           <li class="nav__item"><a href="https://htmlacademy.ru/" class="nav__link">Html academy</a></li>
         </ul>
       </nav>
-      <picture>
-        <img src="" alt="Пейзаж города Sedona">
-      </picture>
+      <a href="#" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
+          <img src="img/logo.svg" alt="Логотип"></a>
+        </picture>
+      <button type="button" class="page-header__toggle page-header__toggle--close"><span>Открыть меню</span></button>
+      <div class="page-header__wrap">
+        <picture>
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-desktop.webp, img/bg-desktop@2x.webp">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-tablet.webp, img/bg-tablet@2x.webp">
+        <source type="image/webp" srcset="img/bg-mobile.webp, img/bg-mobile@2x.webp">
+        <source media="(min-width: 1280px)" srcset="img/bg-desktop.jpg, img/bg-desktop@2x.jpg">
+        <source media="(min-width: 768px)" srcset="img/bg-tablet.jpg, img/bg-tablet@2x.jpg">
+        <img class="page-header__img" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg" alt="Пейзаж города Sedona">
+        </picture>
+        <div class="page-header__inner">
+        </div>
+      </div>
     </header>
 
     <main class="page-main">
@@ -117,5 +130,8 @@
       </p>
       <p class="developed"><a href="https://htmlacademy.ru/">Разработано</a></p>
     </footer>
+    <script src="js/index.js">
+
+    </script>
   </body>
 </html>
