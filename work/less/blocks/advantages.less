@@ -1,3 +1,10 @@
+.advantages {
+  position: absolute;
+  top: 692px;
+  left: 50%;
+
+  margin-left: -140px;
+}
 .advantages__list {
   margin: 0;
   padding: 0;
@@ -37,9 +44,16 @@
   line-height: 24px;
 }
 @media (min-width: @tablet) {
+  .advantages {
+    margin-left: 0;
+    top: 426px;
+    left: 0;
+    width: 100%;
+  }
   .advantages__list {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding-bottom: 65px;
   }
   .advantages__item {
@@ -82,6 +96,6 @@
   }
   .advantages__item-inner {
     width: 290px;
-    
+
   }
 }

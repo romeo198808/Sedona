@@ -26,12 +26,12 @@
       <button type="button" class="page-header__toggle page-header__toggle--close"><span>Открыть меню</span></button>
       <div class="page-header__wrap">
         <picture>
-        <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-desktop.webp, img/bg-desktop@2x.webp">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-tablet.webp, img/bg-tablet@2x.webp">
-        <source type="image/webp" srcset="img/bg-mobile.webp, img/bg-mobile@2x.webp">
-        <source media="(min-width: 1280px)" srcset="img/bg-desktop.jpg, img/bg-desktop@2x.jpg">
-        <source media="(min-width: 768px)" srcset="img/bg-tablet.jpg, img/bg-tablet@2x.jpg">
-        <img class="page-header__img" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg" alt="Пейзаж города Sedona">
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-desktop.webp, img/bg-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-tablet.webp, img/bg-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-mobile.webp, img/bg-mobile@2x.webp 2x">
+        <source media="(min-width: 1280px)" srcset="img/bg-desktop.jpg, img/bg-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-tablet.jpg, img/bg-tablet@2x.jpg 2x">
+        <img class="page-header__img" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg 2x" alt="Пейзаж города Sedona">
         </picture>
         <div class="page-header__inner">
         </div>
@@ -66,41 +66,51 @@
       <section class="reasons">
         <h2 class="reasons__title">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
         <ol class="reasons__list">
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--photo">
             <p class="reasons__item-inner">
               <b class="reasons__item-title">Настоящий городок</b>
               <span class="reasons__item-number">-№1-</span>
               Седона не аттракцион для туристов, там течет своя жизнь
             </p>
             <picture>
-              <img class="reasons__item-img" src="" alt="Город-Седона">
+              <source type="image/webp" media="(min-width: 1080px)" srcset="img/photo-city-desktop.webp, img/photo-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 568px)" srcset="img/photo-city-tablet.webp, img/photo-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-city-mobile.webp, img/photo-city-mobile@2x.webp 2x">
+              <source media="(min-width: 1080px)" srcset="img/photo-city-desktop.jpg, img/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 568px)" srcset="img/photo-city-tablet.jpg, img/photo-city-tablet@2x.jpg 2x">
+              <img class="reasons__item-img" src="img/photo-city-mobile.jpg" srcset="img/photo-city-mobile@2x.jpg 2x" alt="Город-Седона">
             </picture>
           </li>
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--photo">
             <p class="reasons__item-inner">
               <b class="reasons__item-title">Там есть мост Дьявола</b>
               <span class="reasons__item-number">-№2-</span>
               Да, по нему можно пройти! Если вы осмелитесь конечно
             </p>
             <picture>
-              <img class="reasons__item-img" src="" alt="Мост Дьявола">
+              <source type="image/webp" media="(min-width: 1080px)" srcset="img/photo-bridge-desktop.webp, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 568px)" srcset="img/photo-bridge-tablet.webp, img/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bridge-mobile.webp, img/photo-bridge-mobile@2x.webp 2x">
+              <source media="(min-width: 1080px)" srcset="img/photo-bridge-desktop.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 568px)" srcset="img/photo-bridge-tablet.jpg, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="reasons__item-img" src="img/photo-bridge-mobile.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
             </picture>
           </li>
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--text">
             <p class="reasons__item-inner">
               <b class="reasons__item-title">Небольшая площадь</b>
               <span class="reasons__item-number">-№3-</span>
               Все интересные места находятся очень близко
             </p>
           </li>
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--text">
             <p class="reasons__item-inner">
               <b class="reasons__item-title">Красивая дорога</b>
               <span class="reasons__item-number">-№4-</span>
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
-          <li class="reasons__item">
+          <li class="reasons__item reasons__item--text">
             <p class="reasons__item-inner">
               <b class="reasons__item-title">Мало туристов</b>
               <span class="reasons__item-number">-№5-</span>
