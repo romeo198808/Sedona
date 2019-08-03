@@ -21,13 +21,6 @@
   background-color: @color1;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
-  &:hover,
-  &:focus {
-    background-color: #669ec0;
-  }
-  &:active {
-    background-color: #5496bd;
-  }
 }
 .nav__link {
   display: block;
@@ -49,7 +42,7 @@
     width: 20%;
 
     border: none;
-    background-color: inherit;
+    background-color: #ffffff;
     &:nth-child(3) {
       margin-left: auto;
     }
@@ -57,5 +50,16 @@
   .nav__link {
     font-size: 14px;
     color: #000000;
+  }
+}
+@media (max-width: @tablet) {
+  .nav__item {
+    &:hover,
+    &:focus {
+      background-color: #669ec0;
+    }
+    &:active {
+      background-color: #5496bd;
+    }
   }
 }
