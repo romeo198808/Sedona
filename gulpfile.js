@@ -5,12 +5,14 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
 var autoprefixer = require("autoprefixer");
 var svgo = require("gulp-svgo");
 var cwebp = require("gulp-cwebp");
 var imagemin = require('gulp-imagemin');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
+var svgstore = require('gulp-svgstore');
 var del = require('del');
 var gulpCopy = require('gulp-copy');
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
@@ -41,6 +43,7 @@ gulp.task("clean", async function() {
 });
 gulp.task("copy", async function() {
   return gulp.src([
+    "work/*.html",
     "work/fonts/**/*",
     "work/js/**/*",
     "work/css/**/*"], { base: "work" })
@@ -61,14 +64,24 @@ gulp.task("imagemin", async function() {
 });
 gulp.task("html", async function() {
   return gulp.src("work/*.html")
-  .pipe(posthtml())
-  .pipe(gulp.dest("build"));
+  .pipe(posthtml([
+    include()
+  ]))
+  .pipe(gulp.dest("work"));
 });
 gulp.task("cwebp", async function() {
   gulp.src("work/img/**/*.{png,jpg}")
     .pipe(cwebp())
     .pipe(gulp.dest("build/img"))
     .pipe(gulp.dest("work/img"));
+});
+gulp.task("sprite", function () {
+  return gulp.src("work/img/icon-*.svg")
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("work/img"));
 });
 gulp.task("serve", async function() {
   server.init({
@@ -82,6 +95,7 @@ gulp.task("serve", async function() {
   gulp.watch("work/less/**/*.less", gulp.series("style")).on("change", server.reload);
   gulp.watch("work/*.html").on("change", server.reload);
   gulp.watch("work/img/**/*.{jpg,png}", gulp.series("cwebp")).on("change", server.reload);
+  gulp.watch("work/img/icon-*.svg", gulp.series("sprite")).on("change", server.reload);
 });
-gulp.task("go", gulp.series("style", "cwebp", "serve"));
-gulp.task("build", gulp.series("clean", "style", "normalize", "copy", "html", "imagemin", "cwebp"));
+gulp.task("go", gulp.series("style", "cwebp", "sprite", "html", "serve"));
+gulp.task("build", gulp.series("clean", "style", "normalize", "sprite", "html", "copy", "imagemin", "cwebp"));

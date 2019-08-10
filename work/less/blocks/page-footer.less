@@ -1,0 +1,128 @@
+.hesh-teg {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  text-align: center;
+  & a {
+    font-size: 25px;
+    line-height: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+  }
+}
+.social {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.social__item {
+  background-color: @color1;
+  & a {
+    display: block;
+    width: 46px;
+    height: 48px;
+
+    font-size: 0;
+    background-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
+  &:active a {
+    opacity: 0.3;
+  }
+}
+  .twitter {
+    background-image: url("../img/icon-tw.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .facebook {
+    background-image: url("../img/icon-fb.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .youtube {
+    background-image: url("../img/icon-youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .developed {
+    position: relative;
+
+    width: 140px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 22px;
+    padding-left: 5px;
+
+    font-size: 14px;
+    line-height: 35px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    & a {
+      position: absolute;
+      left: 107px;
+      display: inline-block;
+      width: 27px;
+      height: 35px;
+    }
+    & a:hover .developed__svg,
+    & a:focus .developed__svg {
+      fill: #81b3d2;
+    }
+    & a:active .developed__svg {
+      fill: #231F20;
+      opacity: 0.3;
+    }
+  }
+@media (min-width: @tablet) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 36px;
+    padding-bottom: 36px;
+  }
+  .hesh-teg {
+    margin: 0;
+
+    text-align: left;
+    & a {
+      line-height: 48px;
+    }
+  }
+  .social {
+    margin: 0;
+  }
+  .developed {
+    margin: 0;
+
+    line-height: 48px;
+    & a {
+      top: 8px;
+    }
+  }
+}
+@media (min-width:@desktop) {
+  .page-footer {
+    width: 960px;
+  }
+}
