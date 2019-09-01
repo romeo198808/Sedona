@@ -1,0 +1,45 @@
+.form__name {
+  // order: 1;
+  & .form__title {
+    margin-bottom: 25px;
+  }
+}
+.form__contacts {
+  & .form__title {
+    margin-bottom: 30px;
+  }
+}
+.form__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: @tablet) {
+  .form__name {
+    // order: 2;
+    & .form__title {
+      margin-bottom: 60px;
+    }
+  }
+  .form__contacts {
+  & .form__title {
+    padding: 0 60px;
+    text-align: center;
+  }
+  }
+  .form__title {
+    font-size: 21px;
+    text-align: left;
+  }
+}
+@media (min-width: @desktop) {
+  .form__name {
+
+  }
+  .form__contacts {
+    & .form__title {
+      margin-bottom: 75px;
+    }
+  }
+}

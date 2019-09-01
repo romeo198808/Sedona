@@ -4,6 +4,28 @@
 @retina-dpi: 144dpi;
 @retina-dppx: 1.5dppx;
 @color1: #81b3d2;
+.placeholder() {
+  &::-webkit-input-placeholder {
+    font-family: "PTSans";
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000;}
+  &::-moz-placeholder          {
+    font-family: "PTSans";
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000;}/* Firefox 19+ */
+  &:-moz-placeholder           {
+    font-family: "PTSans";
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000;}/* Firefox 18- */
+  &:-ms-input-placeholder      {
+    font-family: "PTSans";
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000;}
+}
 @import "global.less";
 @import "blocks/page-header.less";
 @import "blocks/nav.less";
@@ -15,3 +37,5 @@
 @import "blocks/page-footer.less";
 @import "blocks/reviews.less";
 @import "blocks/form.less";
+@import "blocks/name.less";
+@import "blocks/contacts-info.less";
