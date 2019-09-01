@@ -10,7 +10,7 @@
   </head>
   <body>
     <div style="display: none">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-burger" viewbox="0 0 76.17 68.96">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-burger" viewbox="0 0 76.17 68.96"> 
       <g>
 	    <path d="M71.91,46.04H4.25C1.91,46.04,0,47.96,0,50.29v3.45C0,56.09,1.91,58,4.25,58h0.96v1.04c0,5.46,4.46,9.92,9.92,9.92h45.91
 	  	c5.46,0,9.92-4.46,9.92-9.92V58h0.96c2.34,0,4.25-1.91,4.25-4.25v-3.45C76.17,47.96,74.25,46.04,71.91,46.04z M67.96,59.04
@@ -109,7 +109,7 @@
       <section class="review">
         <h2 class="review__title">Оставьте свой отзыв</h2>
         <p class="review__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form class="review__form" action="https://echo.htmlacademy.ru method="post">
+        <form class="review__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__name name">
             <legend class="form__title">Представьтесь</legend>
             <p class="name__wrap">
@@ -139,39 +139,64 @@
           <fieldset class="form__impression impression">
             <legend class="form__title">Ваше общее впечатление:</legend>
             <p class="impression__wrap">
-              <input class="impression__input" id="positiv" type="radio" name="impression" value="" checked>
+              <input class="impression__input" id="positiv" type="radio" name="impression" value="positiv" checked="">
               <label for="positiv">Скорее положительное</label>
             </p>
             <p class="impression__wrap">
-              <input class="impression__input" id="negative" type="radio" name="impression" value="">
+              <input class="impression__input" id="negative" type="radio" name="impression" value="negativ">
               <label for="negative">Скорее отрицательное</label>
             </p>
             <p class="impression__wrap">
-              <input class="impression__input" id="difficult" type="radio" name="impression" value="">
+              <input class="impression__input" id="difficult" type="radio" name="impression" value="difficult">
               <label for="difficult">Затрудняюсь ответить</label>
             </p>
           </fieldset>
           <fieldset class="form__attractions attractions">
             <legend class="form__title">Посещенные достопремичательности:</legend>
             <p class="attractions__wrap">
-              <input class="attractions__input" id="bridge" type="checkbox" name="attractions" value="" checked>
+              <input class="attractions__input" id="bridge" type="checkbox" name="attractions" value="Bridge of Devil" checked="">
               <label for="bridge">Мост Дьявола</label>
             </p>
             <p class="attractions__wrap">
-              <input class="attractions__input" id="mountain" type="checkbox" name="attractions" value="" checked>
+              <input class="attractions__input" id="mountain" type="checkbox" name="attractions" value="The Mountain Bell" checked="">
               <label for="mountain">Гора Колокол</label>
             </p>
             <p class="attractions__wrap">
-              <input class="attractions__input" id="park" type="checkbox" name="attractions" value="" checked>
+              <input class="attractions__input" id="park" type="checkbox" name="attractions" value="Slide-park" checked="">
               <label for="park">Слайд-парк</label>
             </p>
             <p class="attractions__wrap">
-              <input class="attractions__input" id="rock" type="checkbox" name="attractions" value="">
+              <input class="attractions__input" id="rock" type="checkbox" name="attractions" value="Red rock">
               <label for="rock">Красные скалы</label>
             </p>
           </fieldset>
+          <fieldset class="form__emotions emotions">
+            <legend class="form__title">Опишите свои эмоции:</legend>
+            <p class="emotions__wrap">
+              <textarea name="emotions" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
+            </p>
+          </fieldset>
+          <button class="form__button" type="submit">Отправить отзыв</button>
+          <span class="form__note">* - обязательные поля</span>
         </form>
       </section>
     </main>
+
+    <footer class="page-footer">
+      <p class="hesh-teg"><a href="#">#VisitSedona</a></p>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item"><a class="twitter" href="#">Twitter</a></li>
+          <li class="social__item"><a class="facebook" href="#">Facebook</a></li>
+          <li class="social__item"><a class="youtube" href="#">Youtube</a></li>
+        </ul>
+      </div>
+      <p class="developed">Разработано
+        <a href="https://htmlacademy.ru/"><svg class="developed__svg" width="27" height="34"><use xlink:href="#icon-html"></use></svg></a>
+      </p>
+    </footer>
+    <script src="js/index.js">
+
+    </script>
   </body>
 </html>
