@@ -1,5 +1,4 @@
 .form__name {
-  // order: 1;
   & .form__title {
     margin-bottom: 25px;
   }
@@ -9,28 +8,89 @@
     margin-bottom: 30px;
   }
 }
+.form__impression {
+  & .form__title {
+    margin-bottom: 25px;
+  }
+}
+.form__attractions {
+  & .form__title {
+    margin-bottom: 20px;
+  }
+}
+.form__emotions {
+  & .form__title {
+    margin-bottom: 20px;
+  }
+}
 .form__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
 }
+.form__button {
+  width: 280px;
+  height: 56px;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+.form__note {
+  display: none;
+}
 @media (min-width: @tablet) {
   .form__name {
-    // order: 2;
+    order: 2;
     & .form__title {
       margin-bottom: 60px;
     }
   }
   .form__contacts {
-  & .form__title {
+    order: 3;
+    & .form__title {
     padding: 0 60px;
     text-align: center;
+    }
   }
+  .form__impression {
+    order: 1;
+    .form__title {
+      margin-bottom: 60px;
+    }
+  }
+  .form__attractions {
+    order: 4;
+    & .form__title {
+      width: 285px;
+      margin-bottom: 45px;
+      padding: 0 60px;
+      text-align: center;
+    }
+  }
+  .form__emotions {
+    order: 5;
+    & .form__title {
+      margin-bottom: 60px;
+      text-align: center;
+      padding: 0 60px;
+    }
   }
   .form__title {
     font-size: 21px;
     text-align: left;
+  }
+  .form__button {
+    order: 6;
+    width: 324px;
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 64px;
+  }
+  .form__note {
+    order: 7;
+    display: inline-block;
+    margin-top: 75px;
   }
 }
 @media (min-width: @desktop) {
@@ -41,5 +101,13 @@
     & .form__title {
       margin-bottom: 75px;
     }
+  }
+  .form__impression {
+    & .form__title {
+      padding-left: 80px;
+    }
+  }
+  .form__button {
+    width: 400px;
   }
 }

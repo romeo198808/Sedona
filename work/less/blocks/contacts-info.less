@@ -91,15 +91,30 @@
   .contacts-info__wrap {
     display: flex;
     margin: 0;
+    &--1 {
+      width: 400px;
+      & label {
+        width: 85px;
+      }
+    }
+    &--2 {
+      width: 480px;
+      & label {
+        width: 165px;
+
+      }
+    }
     & label {
-      display: inline-block;
       padding: 0;
-      padding-right: 15px;
+      margin: 0;
 
       line-height: 58px;
       & span {
         display: none;
       }
+    }
+    & .contacts-info__input {
+      width: 315px;
     }
   }
 }

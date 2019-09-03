@@ -1,0 +1,86 @@
+.impression {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 20px;
+  padding-bottom: 10px;
+  width: 280px;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+.impression__wrap {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 1px 0;
+}
+.impression__input {
+  position: absolute;
+  opacity: 0;
+}
+.impression__input + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 80px;
+
+  font-size: 18px;
+  line-height: 56px;
+  font-weight: bold;
+  text-transform: none;
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+    background-color: #f2f2f2;
+  }
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 17px;
+    top: 17px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+    background-color: #000000;
+    opacity: 0;
+  }
+  &:hover::before,
+  &:focus::before {
+    background-color: #e5e5e5;
+  }
+  &:active::before {
+    background-color: #d5d5d5;
+  }
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+.impression__input:checked + label::after {
+  opacity: 1;
+}
+
+@media (min-width: @tablet) {
+  .impression {
+    width: 324px;
+    padding: 0;
+    margin: 0;
+    margin-top: 80px;
+
+    border-bottom: none;
+  }
+}
+@media (min-width: @desktop) {
+  .impression {
+    width: 400px;
+    margin-top: 60px;
+  }
+}
