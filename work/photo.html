@@ -93,7 +93,7 @@
         <nav class="nav">
           <ul class="nav__list nav__list--close nav__list--nojs">
             <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-            <li class="nav__item"><a  class="nav__link">Фото и видео</a></li>
+            <li class="nav__item"><a class="nav__link">Фото и видео</a></li>
             <li class="nav__item"><a href="form.html" class="nav__link">Форма отзыва</a></li>
             <li class="nav__item"><a href="https://htmlacademy.ru/" class="nav__link">Html academy</a></li>
           </ul>
@@ -120,11 +120,79 @@
 
       <main class="page-main">
         <h1 class="visually-hidden">Sedona-фото и видео</h1>
-        <section class="media">
-          <h2 class="media__title">Фото и видео</h2>
-          <p class="media__text">
+        <section class="photo">
+          <h2 class="photo__title">Фото и видео</h2>
+          <p class="photo__text">
             Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
           </p>
+          <ul class="photo__list ">
+            <li class="photo__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-1-desktop.webp, img/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp, img/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-1-mobile.webp, img/photo-1-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x">
+                <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="photo-1">
+              </picture>
+              <p class="photo__item__text">
+                <b class="photo__item__title">Неродные просторы</b>
+                Афтор фото: <span class="photo__item__author">Борис</span>
+                <span class="photo__item__like">1350</span>
+              </p>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-2-desktop.webp, img/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp, img/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2-mobile.webp, img/photo-2-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x">
+                <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="photo-2">
+              </picture>
+              <p class="photo__item__text">
+                <b class="photo__item__title">Местная растительность</b>
+                Афтор фото: <span class="photo__item__author">Сергей</span>
+                <span class="photo__item__like">143</span>
+              </p>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-3-desktop.webp, img/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp, img/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-3-mobile.webp, img/photo-3-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x">
+                <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="photo-3">
+              </picture>
+              <p class="photo__item__text">
+                <b class="photo__item__title">Дорога на север</b>
+                Афтор фото: <span class="photo__item__author">Петр</span>
+                <span class="photo__item__like">96</span>
+              </p>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-4-desktop.webp, img/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet.webp, img/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-4-mobile.webp, img/photo-4-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg 2x">
+                <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="photo-4">
+              </picture>
+              <p class="photo__item__text">
+                <b class="photo__item__title">Мост Дьявола</b>
+                Афтор фото: <span class="photo__item__author">Антон</span>
+                <span class="photo__item__like">254</span>
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="presentashion">
+          <h2 class="presentashion__title">Всё-ещё сомневаетесь?</h2>
+          <p class="presentashion__text">Смотрите видеопрезинтацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_qHjLngt7OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
         </section>
       </main>
 
