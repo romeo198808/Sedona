@@ -1,0 +1,136 @@
+.photo__title {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.photo__text {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 30px;
+
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.photo__list {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+.photo__item {
+  position: relative;
+  width: 280px;
+  padding: 20px;
+  padding-bottom: 0;
+
+  border-bottom: 1px solid #e5e5e5;
+  &:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
+  & img {
+    display: block;
+  }
+}
+.photo__item__text {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+
+  text-transform: none;
+
+  box-sizing: border-box;
+}
+.photo__item__title {
+  display: block;
+
+  text-transform: uppercase;
+}
+.photo__item__like {
+  display: block;
+  width: 85px;
+  margin-top: 5px;
+}
+.photo__item__svg {
+  position: relative;
+  top: 2px;
+  width: 23px;
+  height: 21px;
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.3);
+}
+.photo__item__like-number {
+  font-weight: bold;
+}
+@media (min-width: @tablet) {
+  .photo__title {
+    margin-top: 70px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .photo__text {
+    width: 440px;
+    margin-bottom: 70px;
+  }
+  .photo__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+  .photo__item {
+    width: 324px;
+    padding: 0;
+
+    border: none;
+    &:first-child {
+      width: 100%;
+    }
+    &:nth-child(2n) .photo__item__text {
+      background-color: #f2f2f2;
+    }
+  }
+  .photo__item__text {
+    background-color: #eaeaea;
+  }
+  .photo__item__like {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+}
+@media (min-width: @desktop) {
+  .photo__title {
+    margin-top: 100px;
+  }
+  .photo__list {
+    width: 1200px;
+  }
+  .photo__item {
+    width: 400px;
+    &:nth-child(2n) .photo__item__text {
+      background-color:  rgba(0, 0, 0, 0.3);
+    }
+  }
+  .photo__item__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .photo__item__svg {
+    fill: #ffffff;
+  }
+}
